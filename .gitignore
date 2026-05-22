@@ -5,3 +5,4 @@ dist/
 
 **/output.css
 **/*:Zone.Identifier*
+/generated/prisma

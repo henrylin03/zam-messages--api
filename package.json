@@ -1,15 +1,17 @@
 {
   "name": "zam-messages--api",
   "description": "RESTful APIs for the Zam Messages app, written in Express.js.",
-	"main": "app.js",
+  "main": "app.js",
   "scripts": {
     "build": "tsc && tsc-alias",
     "dev": "tsx watch ./src/app.ts"
   },
-	"author": "Henry Lin",
-	"license": "MIT",
+  "author": "Henry Lin",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "pg": "^8.21.0"
@@ -18,6 +20,7 @@
     "@types/express": "^5.0.6",
     "@types/node": "^25.9.1",
     "@types/pg": "^8.20.0",
+    "prisma": "^7.8.0",
     "tsc-alias": "^1.8.17",
     "tsx": "^4.22.3",
     "typescript": "^6.0.3"
