@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "../../lib/prisma";
 import { body } from "express-validator";
 
 type NameInputField = "firstName" | "lastName";
