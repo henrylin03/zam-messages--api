@@ -8,11 +8,5 @@
     "strict": true,
     "esModuleInterop": true,
     "ignoreDeprecations": "6.0",
-
-    // aliases
-    "paths": {
-      "@/*": ["./src/*"],
-      "@prisma/*": ["./generated/prisma/*"]
-    }
   }
 }
