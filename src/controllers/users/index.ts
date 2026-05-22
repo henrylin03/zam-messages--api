@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { validateNewUser } from "./validateNewUser";
 import { matchedData, validationResult } from "express-validator";
 import bcrypt from "bcryptjs";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "../../lib/prisma";
 
 export const newUserPost = [
   validateNewUser,
