@@ -25,4 +25,8 @@ export const validateNewUser = [
 
   validateNameField("firstName"),
   validateNameField("lastName"),
+
+  body("password")
+    .isLength({ min: 6 })
+    .withMessage("Password must be 6 or more characters."),
 ];
