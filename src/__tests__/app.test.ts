@@ -1,4 +1,4 @@
-import usersRouter from "@/routers/users";
+import usersRouter from "../routers/users";
 import express from "express";
 import request from "supertest";
 import { describe, expect, test } from "@jest/globals";
