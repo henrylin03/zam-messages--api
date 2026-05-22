@@ -4,7 +4,8 @@
   "main": "app.js",
   "scripts": {
     "build": "tsc && tsc-alias",
-    "dev": "tsx watch ./src/app.ts"
+    "dev": "tsx watch ./src/app.ts",
+    "test": "jest"
   },
   "author": "Henry Lin",
   "license": "MIT",
