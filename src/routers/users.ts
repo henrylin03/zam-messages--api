@@ -1,8 +1,7 @@
-import { newUserPost } from "../controllers/users";
 import { Router } from "express";
 
 const usersRouter = Router();
 
-usersRouter.post("/new", ...newUserPost);
+usersRouter.get("/", (_req, res) => res.json("hello user"));
 
 export default usersRouter;
