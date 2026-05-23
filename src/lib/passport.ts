@@ -1,12 +1,17 @@
 import passport from "passport";
-import { Strategy as LocalStrategy } from "passport-local";
+import { IStrategyOptions, Strategy as LocalStrategy } from "passport-local";
 import { prisma } from "./prisma";
 import bcrypt from "bcryptjs";
 
+const OPTIONS: IStrategyOptions = {
+  usernameField: "email",
+  session: false,
+};
+
 passport.use(
-  new LocalStrategy(async (email, password, done) => {
+  new LocalStrategy(OPTIONS, async (username, password, done) => {
     try {
-      const user = await prisma.user.findUnique({ where: { email } });
+      const user = await prisma.user.findUnique({ where: { email: username } });
       if (!user) return done(null, false);
 
       const isCorrectPassword = await bcrypt.compare(password, user.password);
