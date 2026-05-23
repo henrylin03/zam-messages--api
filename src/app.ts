@@ -1,12 +1,14 @@
 import express from "express";
 import "dotenv/config";
 import usersRouter from "./routers/users";
+import authRouter from "./routers/auth";
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/auth", authRouter);
 app.use("/users", usersRouter);
 
 const PORT = 6969;
