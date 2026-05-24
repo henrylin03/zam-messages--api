@@ -1,4 +1,3 @@
-import passport from "passport";
 import { IStrategyOptions, Strategy as LocalStrategy } from "passport-local";
 import { prisma } from "../../lib/prisma";
 import bcrypt from "bcryptjs";

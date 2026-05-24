@@ -5,11 +5,18 @@
   "scripts": {
     "build": "tsc && tsc-alias",
     "dev": "tsx watch ./src/app.ts",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky"
   },
   "author": "Henry Lin",
   "license": "MIT",
   "type": "module",
+  "lint-staged": {
+    "**/*": [
+      "eslint .",
+      "prettier --write --ignore-unknown"
+    ]
+  },
   "dependencies": {
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
@@ -27,6 +34,7 @@
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.5",
     "@babel/preset-typescript": "^7.28.5",
+    "@eslint/js": "^10.0.1",
     "@jest/globals": "^30.4.1",
     "@types/express": "^5.0.6",
     "@types/jest": "^30.0.0",
@@ -39,11 +47,18 @@
     "@types/supertest": "^7.2.0",
     "babel-jest": "^30.4.1",
     "babel-plugin-transform-import-meta": "^2.3.3",
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.6.0",
+    "husky": "^9.1.7",
     "jest": "^30.4.2",
+    "lint-staged": "^17.0.5",
+    "prettier": "3.8.3",
     "prisma": "^7.8.0",
     "supertest": "^7.2.2",
     "ts-jest": "^29.4.11",
     "tsx": "^4.22.3",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.4"
   }
 }
