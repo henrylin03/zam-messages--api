@@ -1,4 +1,4 @@
-import passport from "../../lib/passport";
+import passport from "../../config/passport";
 import { createJwt } from "./createJwt";
 
 export const loginPost = [
